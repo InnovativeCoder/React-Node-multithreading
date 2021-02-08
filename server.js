@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "development") {
 
 // =============connecting to the database==============
 mongoose.connect(
-    "mongodb+srv://user1:93hYs2SMnCqWFUR@cluster0.pojut.mongodb.net/jobs?retryWrites=true&w=majority",
+    `mongodb+srv://user1:${process.env.MONGO_PSWRD}@cluster0.pojut.mongodb.net/jobs?retryWrites=true&w=majority`,
     { useUnifiedTopology: true }
   );
   
